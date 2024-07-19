@@ -5,10 +5,13 @@ This repository contains a university project that I created for the course Adva
 ## Introduction
 The linear stabbing problem is a fundamental problem in computational geometry, where the goal is to efficiently determine which of a set of intervals contain a given query point. 
 
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FExample-of-a-stabbing-query-problem_fig1_220283510&psig=AOvVaw3ZaIM5CRk7qF5VppsOJXkT&ust=1721466683930000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIjQ87DhsocDFQAAAAAdAAAAABAE
 ![image](https://github.com/user-attachments/assets/055ecafc-ade5-414c-b956-04726224c8b1)
 
 An Interval Tree is an advanced data structure designed to solve such problems by organizing intervals in a way that allows for fast querying. At its core, the Interval Tree is a binary search tree where each node stores an interval and potentially additional data structures to manage overlapping intervals efficiently. The tree partitions the space such that queries about which intervals overlap with any given point or another interval can be answered quickly.
+
+![image](https://github.com/user-attachments/assets/0fb20418-d0c3-462d-bc0b-2b03dc1e9c8f)
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FAn-example-interval-tree-This-is-the-interval-tree-that-stores-intervals-1-5-7-15_fig2_293061213&psig=AOvVaw3Ad5estPSKbmrqk9l2Zg9n&ust=1721466777507000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIjU5dDhsocDFQAAAAAdAAAAABAZ
+
 
 ## Implementation
 The Interval Tree implemented in this project is designed to efficiently solve the linear stabbing problem, which involves identifying all intervals that contain a given query point. This section provides a brief description of the structure and functionality of my Interval Tree.
