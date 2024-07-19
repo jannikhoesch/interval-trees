@@ -2,7 +2,7 @@
 
 This repository contains a university project that I created for the course Advanced Data Structures at the Universitat Politècnica de Catalunya. The goal is to implement an Interval Tree in order to solve the linear stabbing problem and to demonstrate the effectiveness of this data structure under various configurations and query loads.
 
-## Introduction
+## Theory
 The linear stabbing problem is a fundamental problem in computational geometry, where the goal is to efficiently determine which of a set of intervals contain a given query point. 
 
 ![image](https://github.com/user-attachments/assets/055ecafc-ade5-414c-b956-04726224c8b1)
