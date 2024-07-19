@@ -8,6 +8,7 @@ The linear stabbing problem is a fundamental problem in computational geometry, 
 ![image](https://github.com/user-attachments/assets/055ecafc-ade5-414c-b956-04726224c8b1)
 
 An Interval Tree is an advanced data structure designed to solve such problems by organizing intervals in a way that allows for fast querying. At its core, the Interval Tree is a binary search tree where each node stores an interval and potentially additional data structures to manage overlapping intervals efficiently. The tree partitions the space such that queries about which intervals overlap with any given point or another interval can be answered quickly.
+
 ![image](https://github.com/user-attachments/assets/0fb20418-d0c3-462d-bc0b-2b03dc1e9c8f)
 
 
