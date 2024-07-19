@@ -13,3 +13,23 @@ The query mechanism determines whether a point falls within any of the stored in
 ## Experiments
 The experiments are designed to evaluate the performance of the Interval Tree and compare it to a naive interval querying method. For different numbers of intervals I measured the build time and memory usage of the Interval Tree and calculated the average time per query.
 The data set consists of randomly generated intervals with endpoints within the range 1 to 1000. The number of intervals tested ranges up to 100000, incremented by 1000 intervals per experiment iteration. For each interval set an Interval Tree is built and the building time and memory usage measured. Then, 100 random point queries are executed that are solved both by the Interval Tree method and a naive method, that checks every interval linearly if it contains the query point. The taken time for each query is recorded and averaged in the end.
+
+## Results
+The results obtained from my experiment illustrate the performance characteristics of the Interval Tree in terms of memory usage, build time, and query efficiency.
+Each interval is stored twice within the tree structure - in the sorted ’Crossing Left’ and ’Crossing Right’ lists of one node. The observed linear increase in memory consumption as the number of intervals increases as shown in Figure 1 aligns well with this theoretical assumption of a storage complexity of O(n).
+
+![memory_usage](https://github.com/user-attachments/assets/72e23152-d1b1-472b-91f9-4a6665cd7916)
+
+The build time of the Interval Tree (Figure 2) showed an increasing trend, consistent with the preprocessing complexity of O(nlogn). This complexity arises from the need to sort interval endpoints and to determine medians, which are necessary steps in constructing the tree’s nodes optimally. The graph indicates that the practical performance follows this expected complexity, with slight fluctuations possibly due to variations in the data distribution or the overhead of recursive tree construction.
+The query time comparison between the Interval Tree and the naive method highlights the efficiency of the Interval Tree (Figure 3). The naive method’s performance degrades linearly as the number of intervals increases, which is expected given its O(n) complexity per query. In contrast, the Interval Tree maintains a much lower increase in query time, adhering to the O(log n + K) complexity, where K is the number of intervals in the query result. If all intervals contain the query point the query time is equal to the naive method, because all intervals are checked. The bigger the number of non-overlapping intervals the lower the query time of the tree method, as this enables the efficient usage of the data structure.
+
+![build_time](https://github.com/user-attachments/assets/6c4d272e-e273-4477-9064-2c10a80ef3a8)
+
+![query_time](https://github.com/user-attachments/assets/3eddfe61-7911-4530-8329-165538cf62dd)
+
+## Conclusion
+This project validated the effectiveness of the Interval Tree for solving the linear stabbing problem, demonstrating significant improvements in query efficiency over a naive approach. With build and query time complexities of O(n log n)) and O(log n + K) respectively, the Interval Tree efficiently balances build time, memory usage, and query speed, confirming its theoretical advantages. The results underscore the Interval Tree’s suitability for applications that demand fast and frequent interval data queries.
+
+
+
+
